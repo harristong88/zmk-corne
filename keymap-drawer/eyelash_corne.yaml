@@ -128,8 +128,8 @@ layers:
   - '|'
   - _
   - $$mdi:apple-keyboard-shift$$
-  - ''
-  - ''
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - LEFT WIN
   - F11
   - F12
