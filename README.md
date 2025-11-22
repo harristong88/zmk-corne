@@ -1,3 +1,5 @@
+# Readme
+As of 20251122, I have updated the keymap but not the diagrams. I will be updating the diagrams soon.
 - [中文](README.md)
 - [English](README_EN.md)
 
