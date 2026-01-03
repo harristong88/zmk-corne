@@ -81,8 +81,8 @@
             bindings = <
 &kp GRAVE  &none  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                  &none         &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS   &trans
 &kp TILDE  &none  &kp DOLLAR       &kp PERCENT   &kp CARET             &none                           &none  &none  &none  &kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS    &kp EQUAL
-&trans     &none  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &none                  &none           &none         &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &trans
-                                   &trans        &trans                &trans                                               &trans        &lt 3 N0      &trans
+&trans     &none  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &none                  &none           &none         &none         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &trans
+                                   &trans        &trans                &trans                                               &kp N0        &trans        &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -94,7 +94,7 @@
 &kp CAPS   &kp F1  &kp F2  &kp F3        &kp F4        &kp F5                   &none         &kp PG_UP  &kp HOME  &kp UP_ARROW    &kp END          &kp PRINTSCREEN  &kp DELETE
 &kp TAB    &kp F6  &kp F7  &kp F8        &kp F9        &kp F10           &none  &none  &none  &kp PG_DN  &kp LEFT  &kp DOWN        &kp RIGHT        &kp PIPE         &kp UNDERSCORE
 &kp LSHFT  &none   &none   &kp LEFT_WIN  &kp F11       &kp F12  &none           &none         &kp LBKT   &kp RBKT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp BSLH         &trans
-                           &trans        &kp LEFT_ALT  &trans                                 &trans     &trans    &trans
+                           &trans        &kp LEFT_ALT  &trans                                 &kp SPACE  &trans    &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -113,5 +113,12 @@
         };
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        layer3 {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
 };
