@@ -103,10 +103,10 @@
         layer_3 {
             display-name = "layer_3";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                     &none         &none       &none         &none         &none      &none  &none
-&none       &out OUT_BLE  &rgb_ug RGB_ON   &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI           &none  &none  &none  &kp K_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none      &none  &none
-&sys_reset  &out OUT_USB  &rgb_ug RGB_OFF  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD  &none           &none         &none       &none         &none         &soft_off  &none  &none
-                                           &none            &none            &none                                          &none       &trans        &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                     &none         &none  &none       &none         &none            &none  &none
+&none       &out OUT_BLE  &rgb_ug RGB_ON   &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI           &none  &none  &none  &none  &kp K_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP  &none  &none
+&sys_reset  &out OUT_USB  &rgb_ug RGB_OFF  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD  &none           &none         &none  &none       &none         &soft_off        &none  &none
+                                           &none            &none            &none                                          &none  &trans      &none
             >;
 
             sensor-bindings = <&scroll_encoder>;
